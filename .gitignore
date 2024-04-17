@@ -1,5 +1,6 @@
 # Directories.
 .cache
+.idea
 coverage
 node_modules
 
