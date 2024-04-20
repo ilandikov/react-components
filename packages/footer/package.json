@@ -1,6 +1,6 @@
 {
   "name": "@mancho.devs/footer",
-  "version": "2.0.0",
+  "version": "2.3.0",
   "description": "A component to render a plain footer text.",
   "main": "index.js",
   "scripts": {
