@@ -119,6 +119,21 @@ export default class CognitoClient {
     });
   }
 
+  /*
+   * Call this when you need to request the OTP code again.
+   */
+  resendConfirmCode(username: string): Promise<string> {
+    return new Promise((resolve, reject) => {
+      this.getCognitoUser(username).resendConfirmationCode(function (err, result) {
+        if (err) {
+          return reject(err);
+        }
+
+        resolve(result);
+      });
+    });
+  }
+
   private getCognitoUser(username: string) {
     return new CognitoUser({
       Username: username,
